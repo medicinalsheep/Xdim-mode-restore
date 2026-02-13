@@ -8,3 +8,4 @@ Click "Load unpacked" → select your folder
 Go to x.com, switch to dark mode (Settings → Premium → Display → Lights Out if needed)
 The extension should auto-apply (default on). Use the toolbar popup
 
+Note: This extension is an independent project and is not affiliated with X
