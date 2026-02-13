@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>X Dim Mode Restorer</title>
+    <style>
+        body {
+            width: 320px;
+            padding: 16px;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0 0 16px;
+            font-size: 17px;
+        }
+
+        .row {
+            margin: 16px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.3);
+            margin-right: 8px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #1d9bf0;
+        }
+
+        .value {
+            font-size: 13px;
+            opacity: 0.9;
+            text-align: right;
+        }
+
+        p {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 12px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h2>X Dim Mode Restorer</h2>
+
+    <div class="row">
+        <label>
+            <input type="checkbox" id="dimToggle">
+            Enable Dim override
+        </label>
+    </div>
+
+    <div class="row" id="intensityRow" style="display:none;">
+        <label for="intensity">Dim intensity</label>
+        <input type="range" id="intensity" min="0" max="100" value="60" step="1">
+        <div class="value"><span id="intensityValue">60</span>%</div>
+    </div>
+
+    <p>0% = close to original Lights Out<br>100% = maximum soft dim</p>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "X Dim Mode Restorer",
+  "description": "Restores the softer 'Dim' dark theme on x.com instead of pure black 'Lights Out'.",
+  "version": "1.0",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://x.com/*",
+    "*://*.x.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "*://x.com/*", "*://*.x.com/*" ],
+      "js": [ "content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
